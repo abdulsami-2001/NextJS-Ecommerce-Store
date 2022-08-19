@@ -6,10 +6,14 @@
 } */
 
 
-/* 
-body {
+html{
+    /* @apply xsm:fixed sm:fixed md:fixed lg:fixed xl:fixed 2xl:relative */
+} 
+
+body{
     @apply overflow-x-hidden 
-} */
+}
+
 
 @tailwind utilities;
 
