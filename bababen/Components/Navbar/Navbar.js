@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import React, { useRef, useContext } from 'react'
-import { AiOutlineShoppingCart, AiFillCloseCircle, AiFillMinusCircle, AiFillPlusCircle } from 'react-icons/ai';
+import { AiOutlineShoppingCart, AiFillMinusCircle, AiFillPlusCircle } from 'react-icons/ai';
 import StoreContext from '../../Context/Store/StoreContext'
 
 const Navbar = () => {
@@ -75,7 +75,7 @@ const Navbar = () => {
                         ))}
                         <div className='flex py-1 items-center space-x-2 ' >
                             {CartItems.length > 0 && <button type="button" className="inline-block px-6 py-2.5 bg-gray-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out">Checkout</button>}
-                            {CartItems.length == 0 &&<button type="button" disabled className="inline-block px-6 py-2.5 bg-red-400 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out">Checkout</button>}
+                            {CartItems.length == 0 && <button type="button" disabled className="inline-block px-6 py-2.5 bg-red-400 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out">Checkout</button>}
                             {CartItems.length > 0 && <button onClick={clearWholeCart} type="button" className="inline-block px-6 py-2.5 bg-gray-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out">Clear Cart</button>}
                             {CartItems.length == 0 && <button onClick={clearWholeCart} type="button" disabled className="inline-block px-6 py-2.5 bg-red-400 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out">Clear Cart</button>}
                         </div>
