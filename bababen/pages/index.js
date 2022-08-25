@@ -1,6 +1,11 @@
+import {useContext} from 'react'
 import Head from 'next/head'
+import StoreContext from '../Context/Store/StoreContext'
+
 
 export default function Home() {
+  const { addItemToCart } = useContext(StoreContext)
+
   return (
     <div>
       <Head>
@@ -87,7 +92,12 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <button className="flex mx-auto mt-16 text-white bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg">Button</button>
+          <button onClick={() => addItemToCart({
+            Key: 6,
+            Name: "New to Cart",
+            Size: 'M, S',
+            Variant: 'Green, Blue',
+          }, 1)} className="flex mx-auto mt-16 text-white bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg">Button</button>
         </div>
       </section>
     </div>
