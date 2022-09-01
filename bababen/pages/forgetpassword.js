@@ -1,19 +1,15 @@
 import Link from 'next/link'
 import React from 'react'
 
-const Signup = () => {
+const ForgetPassword = () => {
   return (
-    <div className="flex min-h-full items-center justify-center py-2 px-4 sm:px-6 lg:px-8">
+    <div className="flex min-h-full  items-center justify-center py-2 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-md space-y-8">
-        <div>
-          <img className="mx-auto w-1/2 md:w-3/4" src="/Bababen.png" src="/Bababen.png" alt="BabaBen" />
-          <h2 className="mt-1 text-center text-xl md:text-3xl font-bold tracking-tight text-gray-900">Sign Up For An Account</h2>
-          <p className="mt-2 text-center text-sm text-gray-600">
-            Or
-            <Link href="/login" >
-              <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500"> Sign In to your account</a>
-            </Link>
-          </p>
+        <div className='text-center' >
+          <img className="mx-auto w-1/2 md:w-3/4" src="/Bababen.png" alt="BabaBen" />
+          <h2 className="mt-1 text-center text-xl md:text-3xl font-bold tracking-tight text-gray-900">Forget Password</h2>
+          <p>Or </p>
+          <Link  href='/login' ><a className="font-medium text-center text-indigo-600 hover:text-indigo-500" >Login</a></Link>
         </div>
         <form className="mt-8 space-y-6" action="#" method="POST">
           <input type="hidden" name="remember" value="true" />
@@ -22,19 +18,8 @@ const Signup = () => {
               <label htmlFor="email-address" className="sr-only">Email address</label>
               <input id="email-address" name="email" type="email" autoComplete="email" required className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Email address" />
             </div>
-            <div>
-              <label htmlFor="password" className="sr-only">Password</label>
-              <input id="password" name="password" type="password" autoComplete="current-password" required className="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Password" />
-            </div>
-          </div>
 
-          <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <input id="remember-me" name="remember-me" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500" />
-              <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">Remember me</label>
-            </div>
           </div>
-
           <div>
             <button type="submit" className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
               <span className="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -42,7 +27,7 @@ const Signup = () => {
                   <path fillRule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clipRule="evenodd" />
                 </svg>
               </span>
-              Sign Up
+              Forgot
             </button>
           </div>
         </form>
@@ -51,4 +36,4 @@ const Signup = () => {
   )
 }
 
-export default Signup
+export default ForgetPassword

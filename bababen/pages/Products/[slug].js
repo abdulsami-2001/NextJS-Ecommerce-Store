@@ -98,12 +98,7 @@ const Slug = () => {
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:space-x-3 sm:space-y-0 items-center space-y-3 ">
                 <span className="title-font font-medium text-2xl text-gray-900">$58.00</span>
-                <button onClick={() => addItemToCart({
-                  Key: 1,
-                  Name: "Add to Cart.",
-                  Size: 'M, S',
-                  Variant: 'Green, Blue',
-                },1)} className="flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Add to Cart</button>
+                <button onClick={() => addItemToCart({ Key: 1254, Name: "Add to Cart.", Size: 'M, S', Variant: 'Green, Blue',Price:58.00 }, 1)} className="flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Add to Cart</button>
                 <div className='flex justify-end space-x-3 ' >
                   <input type="text" onChange={handleChange} className='border-gray-700 px-2 border-2 rounded ' placeholder='Enter Pin Code' />
                   <button disabled={!PinInput} onClick={fetchPinCodes} className="flex  text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Check</button>
@@ -115,7 +110,6 @@ const Slug = () => {
           </div>
         </div>
       </section>
-
     </>
   )
 }
