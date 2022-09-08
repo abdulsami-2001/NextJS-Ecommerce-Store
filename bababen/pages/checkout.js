@@ -54,7 +54,7 @@ const Checkout = () => {
       <div className="existingCartCont px-2 lg:px-5 ">
         {/* <p className='pt-10 px-2 text-xl font-medium' >Your Cart Items:</p> */}
         {CartItems.length <= 0 && <p className='text-xs' >Your Cart Is Currently Empty</p>}
-        <div className=" text-gray-500 dark:text-gray-400">
+        <div className=" text-gray-500  space-y-3 dark:text-gray-400">
           {CartItems.length > 0 && CartItems.map((item) => (
             <div key={item.Key} className='flex py-1 text-sm items-center space-x-5'>
               <p className='text-xs' >{item.Name}</p>
@@ -65,10 +65,10 @@ const Checkout = () => {
               </div>
             </div>
           ))}
-          Sub Total: {SubTotal}
+          <p> Sub Total: {SubTotal}</p>
         </div>
         <Link href='' >
-          <button type="button" className="inline-block px-6 py-2.5 bg-gray-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out">Pay {SubTotal}</button>
+          <button type="button" className="inline-block my-3 px-6 py-2.5 bg-gray-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out">Pay {SubTotal}</button>
         </Link>
       </div>
     </div>
