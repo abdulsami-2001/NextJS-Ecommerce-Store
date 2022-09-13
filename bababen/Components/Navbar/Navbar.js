@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import React, { useRef, useContext } from 'react'
+import React, { useRef, useContext, useEffect } from 'react'
 import { AiOutlineShoppingCart, AiFillMinusCircle, AiFillPlusCircle } from 'react-icons/ai';
 import StoreContext from '../../Context/Store/StoreContext'
 
 const Navbar = () => {
-    const { CartItems, clearWholeCart, editExistingCartItem, SubTotal } = useContext(StoreContext)
+    const { CartItems, clearWholeCart, editExistingCartItem, SubTotal, calculateSubTotal } = useContext(StoreContext)
     const ref = useRef()
     const toggleCart = () => {
         if (ref.current.classList.contains('translate-x-full')) {
@@ -17,6 +17,10 @@ const Navbar = () => {
         }
     }
 
+
+    useEffect(() => {
+        calculateSubTotal()
+    }, [CartItems])
 
     return (
         <>
@@ -42,7 +46,6 @@ const Navbar = () => {
                     <AiOutlineShoppingCart onClick={toggleCart} className='absolute cursor-pointer top-3 right-3' size={24} />
                 </div>
             </div>
-
 
             {/* <!-- drawer component --> */}
             <div className=" overflow-x-hidden">
@@ -79,7 +82,6 @@ const Navbar = () => {
 
                         </div>
                     </div>
-
                 </div>
             </div>
 
