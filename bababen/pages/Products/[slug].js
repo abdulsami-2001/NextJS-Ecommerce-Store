@@ -1,8 +1,11 @@
 import React, { useState, useContext } from 'react'
 import { useRouter } from 'next/router'
 import StoreContext from '../../Context/Store/StoreContext'
+import Products from '../../models/Products'
+import mongoose from 'mongoose'
 
-const Slug = () => {
+const Slug = ({product, variants}) => {
+  console.log(product, variants)
   const { addItemToCart } = useContext(StoreContext)
   const router = useRouter()
   const { slug } = router.query
@@ -98,7 +101,7 @@ const Slug = () => {
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:space-x-3 sm:space-y-0 items-center space-y-3 ">
                 <span className="title-font font-medium text-2xl text-gray-900">$58.00</span>
-                <button onClick={() => addItemToCart({ Key: 1254, Name: "Add to Cart.", Size: 'M, S', Variant: 'Green, Blue',Price:58.00 }, 1)} className="flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Add to Cart</button>
+                <button onClick={() => addItemToCart({ Key: 1254, Name: "Add to Cart.", Size: 'M, S', Variant: 'Green, Blue', Price: 58.00 }, 1)} className="flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Add to Cart</button>
                 <div className='flex justify-end space-x-3 ' >
                   <input type="text" onChange={handleChange} className='border-gray-700 px-2 border-2 rounded ' placeholder='Enter Pin Code' />
                   <button disabled={!PinInput} onClick={fetchPinCodes} className="flex  text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Check</button>
@@ -113,5 +116,30 @@ const Slug = () => {
     </>
   )
 }
+
+
+export async function getServerSideProps(context) {
+
+  if (!mongoose.connections[0].readyState) {
+    await mongoose.connect(process.env.MONGO_URI)
+  }
+
+  let product = await Products.findOne({ slug: context.query.slug })
+  let variants = await Products.find({ title: product.title })
+  let colorSizeSlug = {}
+  for (let item of variants) {
+    if (Object.keys(colorSizeSlug).includes(item.color)) {
+      colorSizeSlug[item.color][item.size] = { slug: item.slug }
+    } else {
+      colorSizeSlug[item.color] = {}
+      colorSizeSlug[item.color][item.size] = {slug:item.slug}
+    }
+  }
+
+  return {
+    props: { product: JSON.parse(JSON.stringify(product)), variants: JSON.parse(JSON.stringify(colorSizeSlug)) }, // will be passed to the page component as props
+  }
+}
+
 
 export default Slug

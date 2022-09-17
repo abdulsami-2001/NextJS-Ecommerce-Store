@@ -1,0 +1,112 @@
+[
+    {
+        "title": "Coders Pink Tshirt, Rs: 800 ",
+        "slug": "coders-one-pink-small-1006",
+        "desc": "A Coders Coders, color: Pink , size: S,  availableQty: 1006",
+        "img": "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/31lEWdMDGWL._AC_UL480_FMwebp_QL65_.jpg",
+        "category": "tshirts",
+        "size": "S",
+        "color": "pink",
+        "price": 800,
+        "availableQty": 1006
+    },
+    {
+        "title": "Coders Pink Tshirt, Rs: 800 ",
+        "slug": "coders-two-pink-medium-859",
+        "desc": "A Coders Coders, color: Pink , size: M availableQty: 859",
+        "img": "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/31lEWdMDGWL._AC_UL480_FMwebp_QL65_.jpg",
+        "category": "tshirts",
+        "size": "M",
+        "color": "pink",
+        "price": 800,
+        "availableQty": 859
+    },
+    {
+        "title": "Coders Pink Tshirt, Rs: 800 ",
+        "slug": "coders-three-pink-large-10",
+        "desc": "A Coders Coders, color: Pink , size: L, availableQty: 10",
+        "img": "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/31lEWdMDGWL._AC_UL480_FMwebp_QL65_.jpg",
+        "category": "tshirts",
+        "size": "L",
+        "color": "pink",
+        "price": 800,
+        "availableQty": 10
+    },
+    {
+        "title": "Coders Pink Tshirt, Rs: 800 ",
+        "slug": "coders-four-pink-extralarge-19",
+        "desc": "A Coders Coders, color: Pink , size: XL, availableQty: 19",
+        "img": "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/31lEWdMDGWL._AC_UL480_FMwebp_QL65_.jpg",
+        "category": "tshirts",
+        "size": "XL",
+        "color": "pink",
+        "price": 800,
+        "availableQty": 19
+    },
+    {
+        "title": "Coders Pink Tshirt, Rs: 800 ",
+        "slug": "coders-fifth-pink-doubleextralarge-26",
+        "desc": "A Coders Coders, color: Pink , size: XXL, availableQty: 26",
+        "img": "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/31lEWdMDGWL._AC_UL480_FMwebp_QL65_.jpg",
+        "category": "tshirts",
+        "size": "XXL",
+        "color": "pink",
+        "price": 800,
+        "availableQty": 26
+    },
+    {
+        "title": "Rana Sanaullah Orange Tshirt, Rs 25",
+        "slug": "rana-Sanaullah-one-orange-small-80",
+        "desc": "A Rana Sanaullah, color: orange , size: S, availableQty: 80",
+        "img": "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51y+D9p8KeL._AC_UL480_FMwebp_QL65_.jpg",
+        "category": "tshirts",
+        "size": "S",
+        "color": "orange",
+        "price": 25,
+        "availableQty": 80
+    },
+    {
+        "title": "Rana Sanaullah Orange Tshirt, Rs 25",
+        "slug": "rana-Sanaullah-two-orange-medium-17",
+        "desc": "A Rana Sanaullah, color: orange , size: M, availableQty: 17",
+        "img": "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51y+D9p8KeL._AC_UL480_FMwebp_QL65_.jpg",
+        "category": "tshirts",
+        "size": "M",
+        "color": "orange",
+        "price": 25,
+        "availableQty": 17
+    },
+    {
+        "title": "Rana Sanaullah Orange Tshirt, Rs 25",
+        "slug": "rana-Sanaullah-three-orange-large-59",
+        "desc": "A Rana Sanaullah, color: orange , size: L, availableQty: 59",
+        "img": "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51y+D9p8KeL._AC_UL480_FMwebp_QL65_.jpg",
+        "category": "tshirts",
+        "size": "L",
+        "color": "orange",
+        "price": 25,
+        "availableQty": 59
+    },
+    {
+        "title": "Shoaib Malik Black Tshirt, Rs 613",
+        "slug": "shoaib-malik-one-black-large-78",
+        "desc": "A shoaib-malik, color: black , size: L, availableQty: 78",
+        "img": "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81QKm1FnvzL._MCnd_AC_UL480_FMwebp_QL65_.jpg",
+        "category": "tshirts",
+        "size": "L",
+        "color": "black",
+        "price": 613,
+        "availableQty": 78
+    },
+    {
+        "title": "Careem yellow Tshirt, Rs 999",
+        "slug": "careem-one-yellow-small-85",
+        "desc": "A shoaib-malik, color: yellow , size: S, availableQty: 85",
+        "img": "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61LBjpefi2L._AC_UL480_FMwebp_QL65_.jpg",
+        "category": "tshirts",
+        "size": "S",
+        "color": "yellow",
+        "price": 999,
+        "availableQty": 85
+    }
+]
