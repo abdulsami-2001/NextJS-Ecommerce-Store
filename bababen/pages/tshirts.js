@@ -4,7 +4,6 @@ import Link from 'next/link'
 import Products from '../models/Products'
 import mongoose from 'mongoose'
 
-const arr = ["LP", "BC"]
 
 const Tshirts = ({ products }) => {
   return (
